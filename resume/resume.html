@@ -52,20 +52,6 @@
         <p>저작권 &copy; 한봄고등학교</p>
         <p>Powered by 스마일서브</p>
     </footer>
-
-    <?php
-    session_start();
-    // 세션에서 사용자 정보 가져오기
-    if (isset($_SESSION['department'])) {
-        echo "<script>
-            document.getElementById('department').textContent = '{$_SESSION['department']}';
-            document.getElementById('grade').textContent = '{$_SESSION['grade']}';
-            document.getElementById('class').textContent = '{$_SESSION['class']}';
-            document.getElementById('number').textContent = '{$_SESSION['number']}';
-            document.getElementById('username').textContent = '{$_SESSION['name']}';
-        </script>";
-    }
-    ?>
 </body>
 <footer>
     <p>Copyright © 한봄고등학교. All Rights Reserved. Powerd by 스마일서브</p>
