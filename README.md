@@ -1,6 +1,6 @@
 # 내손으로 미래JOB기 - 웹페이지 프로젝트
 
-![Hanbom High School](https://upload.wikimedia.org/wikipedia/commons/8/87/Hanbom_logo.png)
+![Hanbom High School](https://github.com/user-attachments/assets/11e8c181-a5bb-4150-97e5-45e5519f1af5)
 
 한봄고등학교의 진로 체험 프로그램인 **"내손으로 미래JOB기"**를 위해 제작된 웹페이지입니다.  
 학생들이 다양한 직무 정보를 탐색하고 모의 입사 활동을 통해 취업 역량을 높일 수 있도록 구성되었습니다.
