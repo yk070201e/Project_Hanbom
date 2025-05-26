@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-height, initial-scale=1.0">
+    <title>이력서 등록</title>
+    <link rel="stylesheet" href="styles.css"> <!-- CSS 파일 링크 -->
+    <link href="imge/logo.png" rel="shortcut icon" type="imge/x-icon"> <!--서버 아이콘 변경-->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet"> <!--폰트설정-->
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2 class="title">이력서 등록</h2> <!-- 클래스 추가 -->
+        </div>
+        <div class="error-message" id="error-message">* 내용을 제대로 입력해주세요</div> <!-- 오류 메시지 추가 -->
+        
+        <!-- 사용자 정보 표시 -->
+        <div class="user-info">
+            <h3>내 정보</h3>
+            <p>학과: <span id="department"></span></p>
+            <p>학년: <span id="grade"></span></p>
+            <p>반: <span id="class"></span></p>
+            <p>번호: <span id="number"></span></p>
+            <p>이름: <span id="username"></span></p>
+        </div>
+
+        <form id="resumeForm">
+            <label for="email">이메일:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">전화번호:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="education">학력:</label>
+            <input type="text" id="education" name="education" required>
+
+            <label for="experience">경력:</label>
+            <textarea id="experience" name="experience" rows="4" required></textarea>
+
+            <label for="skills">기술:</label>
+            <textarea id="skills" name="skills" rows="4" required></textarea>
+
+            <button type="submit">이력서 등록하기</button>
+        </form>
+    </div>
+
+    <script src="resume.js"></script> <!-- JavaScript 파일 링크 -->
+
+    <!-- 저작권 표시 -->
+    <footer style="text-align: center; margin-top: 20px; padding: 10px; background-color: #f4f4f4;">
+        <p>저작권 &copy; 한봄고등학교</p>
+        <p>Powered by 스마일서브</p>
+    </footer>
+
+    <?php
+    session_start();
+    // 세션에서 사용자 정보 가져오기
+    if (isset($_SESSION['department'])) {
+        echo "<script>
+            document.getElementById('department').textContent = '{$_SESSION['department']}';
+            document.getElementById('grade').textContent = '{$_SESSION['grade']}';
+            document.getElementById('class').textContent = '{$_SESSION['class']}';
+            document.getElementById('number').textContent = '{$_SESSION['number']}';
+            document.getElementById('username').textContent = '{$_SESSION['name']}';
+        </script>";
+    }
+    ?>
+</body>
+<footer>
+    <p>Copyright © 한봄고등학교. All Rights Reserved. Powerd by 스마일서브</p>
+</footer>
+</html>
